@@ -5,6 +5,7 @@
     ],
     "plugins": ["stylelint-order"],
     "rules": {
+        "no-empty-source": null,
         "order/properties-alphabetical-order": true
     }
 }
