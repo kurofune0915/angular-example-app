@@ -15,6 +15,7 @@
         "plugin:@angular-eslint/template/process-inline-templates",
         "plugin:prettier/recommended"
       ],
+      "plugins": ["import", "unused-imports"],
       "rules": {
         "@angular-eslint/directive-selector": [
           "error",
@@ -31,7 +32,32 @@
             "prefix": "app",
             "style": "kebab-case"
           }
-        ]
+        ],
+        "import/order": [
+          "error",
+          {
+            "groups": [
+              "builtin",  // Node.jsの組込モジュール
+              "external", // 外部モジュール
+              "internal", // 自作モジュール
+              "parent",   // 親階層のファイル
+              "sibling",  // 同階層のファイル
+              "index"     // 同階層のindexファイル
+            ],
+            "newlines-between": "always",
+            "alphabetize": {
+              "order": "asc",
+              "caseInsensitive": true
+            },
+            "pathGroups": [{
+              "pattern": "@angular**",
+              "group": "external",
+              "position": "before"
+            }]
+          }
+        ],
+        "@typescript-eslint/no-unused-vars": "off", // 二重にエラーが表示されるのでOFFに
+        "unused-imports/no-unused-imports": "error"
       }
     },
     {
