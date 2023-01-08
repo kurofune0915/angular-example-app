@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
+import { MatBadgeModule } from '@angular/material/badge';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -12,10 +14,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TopComponent } from './contents/top/top.component';
+import { ViewBadgeComponent } from './contents/view-badge/view-badge.component';
+import { ViewPdfComponent } from './contents/view-pdf/view-pdf.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
-import { ViewPdfComponent } from './contents/view-pdf/view-pdf.component';
 
 @NgModule({
   declarations: [
@@ -25,14 +28,17 @@ import { ViewPdfComponent } from './contents/view-pdf/view-pdf.component';
     SidenavComponent,
     TopComponent,
     ViewPdfComponent,
+    ViewBadgeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatBadgeModule,
     MatButtonModule,
     MatCardModule,
     MatExpansionModule,
+    MatIconModule,
     MatListModule,
     MatToolbarModule,
     MatTooltipModule,

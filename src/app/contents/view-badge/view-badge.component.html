@@ -1,0 +1,21 @@
+<mat-icon
+  [matBadge]="unread | async"
+  [matBadgeHidden]="isBadgeHide()"
+  matBadgeColor="warn"
+>
+  home
+</mat-icon>
+<div [hidden]="!isListMode">
+  <mat-nav-list>
+    <mat-list-item
+      *ngFor="let list of infoList; index as i"
+      (click)="showDetail(i)"
+    >
+      {{ list.title }}
+    </mat-list-item>
+  </mat-nav-list>
+</div>
+<div [hidden]="!isDetailMode">
+  <p>{{ selectedItem?.title }}</p>
+  <button mat-raised-button color="primary" (click)="showList()">戻る</button>
+</div>
