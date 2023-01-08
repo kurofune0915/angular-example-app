@@ -1,0 +1,15 @@
+<mat-accordion>
+  <mat-expansion-panel class="nav" *ngFor="let nav of sidenav">
+    <mat-expansion-panel-header>
+      <mat-panel-title>{{ nav.category }}</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list>
+      <mat-list-item *ngFor="let menu of nav.menuList">
+        <a matListItemTitle [href]="menu.path">
+          {{ menu.name }}
+        </a>
+        <span matListItemLine>{{ menu.description }}</span>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-expansion-panel>
+</mat-accordion>
