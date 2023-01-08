@@ -15,6 +15,7 @@ import { TopComponent } from './contents/top/top.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { ViewPdfComponent } from './contents/view-pdf/view-pdf.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     FooterComponent,
     SidenavComponent,
     TopComponent,
+    ViewPdfComponent,
   ],
   imports: [
     BrowserModule,

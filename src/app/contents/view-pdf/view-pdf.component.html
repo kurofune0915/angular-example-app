@@ -1,0 +1,18 @@
+<input
+  type="file"
+  accept="application/pdf"
+  (change)="onChangeFileInput()"
+  #fileInput
+/>
+<button mat-raised-button color="primary" (click)="onClickFileInputButton()">
+  ファイル選択
+</button>
+<button mat-raised-button color="primary" (click)="clearFile()">クリア</button>
+<p *ngIf="!file; else fileName">ファイルが選択されていません。</p>
+
+<ng-template #fileName>
+  <p>
+    <a href (click)="openWindow($event)">{{ file?.name }}</a>
+  </p>
+  <p>{{ url }}</p>
+</ng-template>
