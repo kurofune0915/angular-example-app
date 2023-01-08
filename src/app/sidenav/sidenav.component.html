@@ -4,10 +4,8 @@
       <mat-panel-title>{{ nav.category }}</mat-panel-title>
     </mat-expansion-panel-header>
     <mat-nav-list>
-      <mat-list-item *ngFor="let menu of nav.menuList">
-        <a matListItemTitle [href]="menu.path">
-          {{ menu.name }}
-        </a>
+      <mat-list-item [routerLink]="menu.path" *ngFor="let menu of nav.menuList">
+        <span matListItemTitle>{{ menu.name }}</span>
         <span [matTooltip]="menu.description" matListItemLine>
           {{ menu.description }}
         </span>
