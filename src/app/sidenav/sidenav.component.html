@@ -8,7 +8,9 @@
         <a matListItemTitle [href]="menu.path">
           {{ menu.name }}
         </a>
-        <span matListItemLine>{{ menu.description }}</span>
+        <span [matTooltip]="menu.description" matListItemLine>
+          {{ menu.description }}
+        </span>
       </mat-list-item>
     </mat-nav-list>
   </mat-expansion-panel>
