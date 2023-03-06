@@ -1,0 +1,5 @@
+<p>タイトル: <input type="text" [(ngModel)]="title" /></p>
+<p>メッセージ: <input type="text" [(ngModel)]="message" /></p>
+<p>ファイル: <input type="file" (change)="onFileSelect($event)" /></p>
+<button mat-raised-button color="primary" (click)="post()">送信</button>
+<pre>{{ response | json }}</pre>

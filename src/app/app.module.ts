@@ -1,4 +1,6 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -13,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PostFileJsonComponent } from './contents/post-file-json/post-file-json.component';
 import { TopComponent } from './contents/top/top.component';
 import { ViewBadgeComponent } from './contents/view-badge/view-badge.component';
 import { ViewPdfComponent } from './contents/view-pdf/view-pdf.component';
@@ -29,11 +32,14 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     TopComponent,
     ViewPdfComponent,
     ViewBadgeComponent,
+    PostFileJsonComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
+    HttpClientModule,
     MatBadgeModule,
     MatButtonModule,
     MatCardModule,
